@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'RocknRoll One', sans-serif;
+    
+}
+
+/* ------------------------------------body----------------------------------------------- */
+
+main {
+    font-size: 5em;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 0.2fr 2fr 0.2fr;
+    grid-template-columns: 0.3fr 0.5fr 1fr 1fr;
+    background-color: rgb(240, 227, 218);
+    /* grid-gap: 0.1em; */
+}
+
+/* ------------------------------------Header----------------------------------------------- */
+
+.head {
+    background-color: rgba(220, 20, 60, 0.644);
+    grid-row: 1/2;
+    grid-column: 1/5;
+    align-self: center;
+    padding: 0.1em;
+    text-align: center;
+    animation: fro 5s linear infinite alternate;
+    font-weight: bold;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-radius: 2em;
+    box-shadow: 2px 2px 2px black inset;
+}
+
+.sqheadname {
+    font-size: 1.2em;
+}
+
+.sqheadname:hover {
+    color: darkorange;
+    
+}
+
+@keyframes fro {
+    from {
+        padding-left: 60%;
+    }
+    to {
+        padding-right: 60%;
+    }
+}
+
+/* ------------------------------------Main Body----------------------------------------------- */
+
+.mainbody {
+    
+    /* background-color: rgb(68, 0, 255); */
+    grid-row: 2/3;
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6em;
+    padding-left: 0.5em;    
+}
+
+.helloiam {
+    color: orangered;
+    text-shadow: 2px 2px 2px black;
+}
+
+.sq {
+    font-size: 1.5em;
+    color: chartreuse;
+    text-shadow: 2px 2px 2px black;
+}
+
+.wdr {
+    color: white;
+    font-size: .4em;
+    text-shadow: 2px 2px 2px black;
+}
+
+#wip {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    
+    width: 100%;
+}
+
+.butt {
+    margin-top: 1em;
+
+}
+
+
+button {
+    background-color: rgba(255, 140, 0, 0.61);
+    border: 2px solid red;
+    padding: 0.9em;
+    border-radius: 2em;
+}
+
+button:hover {
+    background-color: rgba(255, 140, 0, 0.925);
+
+}
+
+/* ------------------------------------Images----------------------------------------------- */
+.images {
+    
+    background-color: sandybrown;
+    grid-row: 2/4;
+    grid-column: 4/5;
+    
+}
+
+.myimage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;   
+    
+}
+
+.mylogo {
+    position: absolute;  
+    animation: fade 1s linear infinite alternate;
+     
+}
+
+@keyframes fade {
+    from {opacity: 1;}
+    from {opacity: 0;}
+}
+
+.mylogo:hover {
+    animation: none;
+    width: 10%;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------Nav Bar----------------------------------------------- */
+.nav {
+    background-color: seashell;
+    grid-row: 2/4;
+    grid-column: 1/2;
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 30%;
+}
+
+.nav a:hover {
+    font-size: .8em;
+    color: darkorange;
+}
+
+
+
+/* ------------------------------------Footer----------------------------------------------- */
+
+.foot {
+    background-color: seashell;
+    grid-row: 3/4;
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.foot .text  {
+    color: darkorange;
+}
+
+.foot .text:hover  {
+    color: mediumblue;
+}
+
+.fab {
+    margin-right: 10px;
+    font-size: 1.6em;
+    color: darkorange;
+}
+
+.fa-facebook:hover{
+    
+    color: blue;
+}
+
+.fa-instagram:hover{
+    color: maroon;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------600px----------------------------------------------- */
+
+@media (max-width: 600px) {
+    main {
+        grid-template-rows: 0.1fr 0.3fr 1fr 0.5fr 0.2fr;
+        grid-template-columns: 1fr;
+        background-color: rgb(240, 227, 218);
+    }
+    .head {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-right: 0.3em;
+        margin-left: 0.3em;
+        animation: fro 2s linear infinite alternate;
+        /* margin-right: 0;
+        margin-left: 0;
+        padding: .5em;
+        box-shadow: none;
+        border-radius: 0; */
+    }
+
+    @keyframes fro {
+        from {
+            padding-left: 40%;
+        }
+        to {
+            padding-right: 40%;
+        }
+    }
+
+    .nav {
+        
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav a {
+        margin-top:0px ;
+        
+    }
+    .mainbody {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    button {
+        width: 50%;
+        padding: 0.1em;
+        border-radius: 2em;
+    }
+
+    .butt {
+        margin-top: 0;
+        margin-bottom: 10px;
+    
+    }
+
+    .images {
+        grid-row: 4/5;
+        grid-column: 1/2;
+        background-size: cover;
+    
+    }
+
+    .sqimage {
+        
+        width: fit-content;
+        height: auto;        
+        
+    }
+
+    .mylogo:hover {
+       width: 30%;
+    }
+
+    
+
+
+    .foot {
+        background-color: seashell;
+        grid-row: 5/6;
+        grid-column: 1/2;
+        font-size: 0.6em;
+    }
+}
