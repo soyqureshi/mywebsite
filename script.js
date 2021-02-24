@@ -1,11 +1,12 @@
 
 
 function contactMe () {
-    document.getElementsById("sqheadname").innerHTML = "+91 9167-553-218";
+    document.getElementById ("sqheadname").innerHTML = "+91 9167-553-218";
 
-    document.querySelector (".sqheadname").style.color = "chartreuse";
+    document.querySelector ("#sqheadname").style.color = "chartreuse";
     document.querySelector (".head").style.animation = "fro 20s linear infinite alternate";
 }
+
 
 
 
