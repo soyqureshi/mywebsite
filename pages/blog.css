@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'RocknRoll One', sans-serif;
+        
+}
+
+/* ---------------------------------------------Main------------------------------------------------- */
+
+main {
+    background-color: rgb(240, 227, 218);
+    font-size: 5em;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.2fr 0.2fr 1fr 1fr 0.2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+}
+
+/* ---------------------------------------------Navigation Blog Bar----------------------------------- */
+
+.navigationblogbar {
+    background-color: seashell;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 0.2em;
+    
+}
+
+.navigationblogbar  div a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigationblogbar  div a:hover {
+    color: darkorange;
+    font-size: 0.8em ;
+
+}
+
+/* ---------------------------------------------Blog------------------------------------------------- */
+
+.blog {
+    background-color: rgba(220, 20, 60, 0.644);
+    
+    grid-row: 2/3;
+    grid-column: 1/4;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;    
+    align-self: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-radius: 2em;
+    box-shadow: 2px 2px 2px black inset;
+    animation: moving 5s infinite alternate linear;
+
+}
+
+.blogname {
+    font-size: 1em;
+}
+
+.blogname:hover {
+    color: darkorange;
+}
+
+@keyframes moving {
+    from {padding-right: 60%;}
+    to {padding-left: 60%;}
+}
+
+/* ----------------------------------------Topics General---------------------------------------- */
+
+
+.topic {
+    background-color: floralwhite;    
+    margin-left: 6em;
+    margin-right: 6em;
+    padding: 1em;
+    
+}
+
+.blogsidetext {
+    
+    margin-left: 1em;
+}
+
+
+
+.blogsidetext h1 a{
+    font-size: 3.5em;
+    color: black;
+    text-decoration: none;
+}
+
+.blogsidetext h1 a:hover {
+    color: darkslategrey;
+    cursor: pointer;
+}
+
+.blogsidetext div {
+    font-size: 1em;
+    
+}
+
+.blogsidetext p {
+    font-size: 1.5em;
+} 
+
+
+
+
+
+/* ---------------------------Topic One----------------------- */
+
+.topicone {
+    background-color: floralwhite;
+    grid-row: 3/4;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+
+
+
+
+/* ---------------------------Topic Two----------------------- */
+
+.topictwo {
+    
+    grid-row: 4/5;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;   
+    
+}
+
+/* -----------------------------------------Footer------------------------------------------------- */
+
+
+.foot {
+    background-color: seashell;
+    grid-row: 5/6;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.foot .text  {
+    color: darkorange;
+}
+
+.foot .text:hover  {
+    color: mediumblue;
+}
+
+.fab {
+    margin-right: 10px;
+    font-size: 1.6em;
+    color: darkorange;
+}
+
+.fa-facebook:hover{
+    
+    color: blue;
+}
+
+.fa-instagram:hover{
+    color: maroon;
+}
+
+
+/* ------------------------------------------------Smaller View------------------------------------------------ */
+/* ------------------------------------------------800px------------------------------------------------ */
+/* ------------------------------------------------800px------------------------------------------------ */
+
+@media (max-width: 800px) {
+    main {
+        
+        grid-template-rows: 0.1fr 0.1fr 1fr 1fr 0.1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .navigationblogbar {
+        grid-row: 1/2;
+        grid-column: 1/2; 
+        justify-content:space-around;
+    }
+
+    .blog {
+        
+        grid-row: 2/3;
+        grid-column: 1/2;   
+        animation: moving 2s infinite alternate linear;   
+        margin-right: 0.1em; 
+        margin-left: 0.1em;
+        /* margin-top: -1em;
+        margin-bottom: -1em; */
+        
+    
+    }
+
+    @keyframes moving {
+        from {padding-right: 40%;}
+        to {padding-left: 40%;}
+    }
+
+    .thumbnail {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+
+    .topicone {
+        
+        grid-row: 3/4;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0%;       
+        
+    }
+
+    .topictwo {
+        
+        grid-row: 4/5;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0%;       
+        
+    }
+
+    .foot {
+     
+        grid-row: 5/6;
+        grid-column: 1/2;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+    }
+
+    
+
+    
+    
+    
+    
+    
+}
