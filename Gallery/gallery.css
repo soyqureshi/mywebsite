@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'RocknRoll One', sans-serif;
+        
+}
+
+/* ---------------------------------------------Main------------------------------------------------- */
+
+main {
+    background-color: rgb(240, 227, 218);
+    font-size: 5em;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.2 fr 0.2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+}
+
+/* ---------------------------------------------Navigation Bar------------------------------------------------- */
+
+.navigationbar {
+    background-color: seashell;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 0.2em;
+    
+}
+
+.navigationbar div a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigationbar div a:hover {
+    color: darkorange;
+    font-size: 0.8em ;
+
+}
+
+/* ---------------------------------------------Gallery------------------------------------------------- */
+
+.gallery {
+    background-color: rgba(220, 20, 60, 0.644);
+    
+    grid-row: 2/3;
+    grid-column: 1/4;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;    
+    align-self: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-radius: 2em;
+    box-shadow: 2px 2px 2px black inset;
+    animation: moving 5s infinite alternate linear;
+
+}
+
+.galleryname {
+    font-size: 1em;
+}
+
+.galleryname:hover {
+    color: darkorange;
+}
+
+@keyframes moving {
+    from {padding-right: 60%;}
+    to {padding-left: 60%;}
+}
+
+/* ---------------------------------------------One------------------------------------------------- */
+
+.one {
+    
+    grid-row: 3/4;
+    grid-column: 1/2;   
+    
+}
+
+
+/* ---------------------------------------------Two------------------------------------------------- */
+
+
+.two {
+    
+    grid-row: 3/4;
+    grid-column: 2/3;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.three {
+    
+    grid-row: 3/4;
+    grid-column: 3/4;
+    
+}
+
+.four {
+    
+    grid-row: 4/5;
+    grid-column: 1/2;
+    
+}
+
+.five {
+    
+    grid-row: 4/5;
+    grid-column: 2/3;
+    
+}
+
+.six {
+    
+    grid-row: 4/5;
+    grid-column: 3/4;
+    
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+img:hover {
+    opacity: 0.5;
+    
+}
+
+
+/* ------------------------------------------------600px---------------------------------------------------- */
+
+@media (max-width: 600px) {
+    main {
+        
+        grid-template-rows: 0.1 fr 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .navigationbar {
+        grid-row: 1/2;
+        grid-column: 1/2; 
+        justify-content:space-around;
+    }
+
+    .gallery {
+        
+        grid-row: 2/3;
+        grid-column: 1/2;   
+        animation: moving 2s infinite alternate linear;   
+        margin-right: 0.1em; 
+        margin-left: 0.1em;
+        /* margin-top: -1em;
+        margin-bottom: -1em; */
+        
+    
+    }
+
+    @keyframes moving {
+        from {padding-right: 40%;}
+        to {padding-left: 40%;}
+    }
+
+    .one {
+        
+        grid-row: 3/4;
+        grid-column: 1/2;
+        
+    }
+
+    .two {
+       
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+
+    .three {
+      
+        grid-row: 5/6;
+        grid-column: 1/2;
+        
+    }
+    
+    .four {
+        
+        grid-row: 6/7;
+        grid-column: 1/2;
+        
+    }
+    
+    .five {
+       
+        grid-row: 7/8;
+        grid-column: 1/2;
+        
+    }
+    
+    .six {
+       
+        grid-row: 8/9;
+        grid-column: 1/2;
+        
+    }
+    
+    
+    
+    
+}
