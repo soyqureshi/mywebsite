@@ -195,6 +195,15 @@ label {
 
 }
 
+#buttt {
+    background-color: dimgray;
+    width: 5em;
+    height: 2em;
+    font-size: 1em;
+    box-shadow: 2px 2px 5px black;
+}
+
+
 
 
 
@@ -338,6 +347,11 @@ label {
     
     }
    
+    #buttt {
+        
+        font-size: 1.5em;
+    }
+
 
     /* --------------------------------800px Footer ------------------------------------------ */
 
