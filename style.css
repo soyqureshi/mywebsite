@@ -37,8 +37,12 @@ main {
     box-shadow: 2px 2px 2px black inset;
 }
 
+
+
 #sqheadname {
     font-size: 1.2em;
+    animation: 0;
+     
 }
 
 #sqheadname:hover {
@@ -46,6 +50,11 @@ main {
     
 }
 
+
+@keyframes sqfade {
+    from {opacity: 1;}
+    from {opacity: 0;}
+}
 @keyframes fro {
     from {
         padding-left: 60%;
