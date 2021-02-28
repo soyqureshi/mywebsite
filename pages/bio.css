@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+/* ---------------------------------------------Main------------------------------------------------- */
+
+main {
+    background-color: rgb(240, 227, 218);
+    font-size: 5em;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.2fr 0.2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+}
+
+/* ---------------------------------------------Navigation Bio Bar----------------------------------- */
+
+.navigationbiobar {
+    background-color: seashell;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.2em;
+}
+
+.navigationbiobar div a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigationbiobar div a:hover {
+    color: darkorange;
+    font-size: 0.8em;
+}
+
+/* ---------------------------------------------Bio------------------------------------------------- */
+
+.bio {
+    background-color: rgba(220, 20, 60, 0.644);
+    grid-row: 2/3;
+    grid-column: 1/4;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-radius: 2em;
+    box-shadow: 2px 2px 2px black inset;
+    animation: moving 5s infinite alternate linear;
+}
+
+.bioname {
+    font-size: 1em;
+}
+
+.bioname:hover {
+    color: darkorange;
+}
+
+@keyframes moving {
+    from {
+        padding-right: 60%;
+    }
+    to {
+        padding-left: 60%;
+    }
+}
+
+/* ---------------------------------------- Main CV Upper---------------------------------------- */
+
+.uppermainbodycv {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    /* height: 400px; */
+    background-color: seashell;
+    /* background-image: url(galimg/bioimage.jpg); */
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.uppertext {
+    color: chartreuse;
+    text-shadow: 2px 2px 3px rgb(255, 0, 0);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 3em;
+    right: 3.5em;
+    cursor:pointer;
+    
+    
+}
+
+.uppertext:hover {
+    animation: blink 0.1s linear infinite alternate;
+    
+}
+
+@keyframes blink {
+    from {
+        color: chartreuse;
+    }
+
+    to {color: yellow;}
+}
+
+
+
+.bioupimage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 35%;
+}
+
+.squr {
+    font-size: 1em;
+}
+
+/* ---------------------------------------- Main CV Lower---------------------------------------- */
+
+.lowermainbodycv {
+    grid-row: 4/5;
+    grid-column: 1/4;
+    /* background-color: rgb(131, 139, 16); */
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    
+}
+
+.aboutme {
+    background-color: rgb(0, 136, 255);
+    
+    font-size: 1em;
+    width: 50%;
+    padding: 0.5em;
+}
+
+.aboutme h1 {
+    font-size: 1em;
+}
+
+.skills h1 {
+    font-size: 1.5em;
+    cursor: pointer;
+
+}
+
+
+
+
+.skills {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0.5em;
+    
+}
+
+.skills label {
+    font-size: 1.4em;
+    cursor: pointer;
+    
+    
+    
+}
+
+.skills label:hover {
+    color: darkgray;
+    
+    
+}
+
+
+
+progress {
+    border-radius: 7px; 
+    width: 80%;
+    height: 2em;
+    
+    
+  }
+
+  
+
+
+  progress::-webkit-progress-bar {
+    background-color: aqua;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.8) inset;
+    
+  }
+
+  progress::-webkit-progress-value {
+    background-color: blue;
+    border-radius: 7px;   
+    transition: 1s;    
+  }
+
+  
+
+
+
+
+/* -----------------------------------------Footer------------------------------------------------- */
+
+.foot {
+    background-color: seashell;
+    grid-row: 5/6;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.foot .text {
+    color: darkorange;
+}
+
+.foot .text:hover {
+    color: mediumblue;
+}
+
+.fab {
+    margin-right: 10px;
+    font-size: 1.6em;
+    color: darkorange;
+}
+
+.fa-facebook:hover {
+    color: blue;
+}
+
+.fa-instagram:hover {
+    color: maroon;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------Smaller View------------------------------------------------ */
+
+/* ------------------------------------------------800px------------------------------------------------ */
+
+/* ------------------------------------------------800px------------------------------------------------ */
+
+@media (max-width: 800px) {
+    main {
+        grid-template-rows: 0.1fr 0.1fr 1fr 1.8fr 0.1fr;
+        grid-template-columns: 1fr;
+    }
+    .navigationbiobar {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        justify-content: space-around;
+    }
+
+
+    .bio {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        animation: moving 2s infinite alternate linear;
+        margin-right: 0.1em;
+        margin-left: 0.1em;
+        /* margin-top: -1em;
+        margin-bottom: -1em; */
+    }
+    @keyframes moving {
+        from {
+            padding-right: 40%;
+        }
+        to {
+            padding-left: 40%;
+        }
+    }
+
+
+    .uppermainbodycv {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        background-size: cover;
+        justify-content: flex-end;
+    }
+    .uppertext {
+        
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        font-size: 2em;
+        right: 0px;
+        /* bottom: 200px; */
+        padding: 0.1em;
+    }
+    .bioupimage {
+        
+        width: 100%;
+        object-fit: cover;
+    }
+    .squr {
+        font-size: 1em;
+    }
+
+    .lowermainbodycv {
+        grid-row: 4/5;
+        grid-column: 1/2;
+        
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+ 
+    .aboutme {
+        font-size: 1em;
+        width: 100%;
+        
+    }
+     
+    .skills {
+        width: 100%;
+        
+    }
+    
+
+
+
+
+
+
+
+
+
+
+    .foot {
+        grid-row: 5/6;
+        grid-column: 1/2;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
